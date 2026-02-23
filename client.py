@@ -4,7 +4,7 @@ import json
 import os
 from time import sleep
 
-
+# Env loading
 def load_env(path="data.env"):
     if not os.path.exists(path):
         return
@@ -21,8 +21,9 @@ def load_env(path="data.env"):
 
 
 load_env()
-sleep(1)
-print("loaded env",os.environ.get("SERVER_IP"))
+
+# Client connection
+
 SERVER_IP = os.environ["SERVER_IP"]
 PORT = int(input("Insert port: "))
 FOLDER = str(input("Insert destination folder path: "))
